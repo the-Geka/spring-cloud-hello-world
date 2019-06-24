@@ -1,0 +1,40 @@
+spring:
+  application:
+    name: cloud-zuul-server
+
+eureka:
+  client:
+    region: default
+    registryFetchIntervalSeconds: 5
+hystrix:
+  command:
+    book-service:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 600000
+    discovery:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 600000
+    rating-service:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 600000
+server:
+  port: 8080
+
+zuul:
+  routes:
+    book-service:
+      path: /book-service/**
+      sensitive-headers: Set-Cookie,Authorization
+    discovery:
+      path: /discovery/**
+      sensitive-headers: Set-Cookie,Authorization
+      url: http://localhost:8082
+    rating-service:
+      path: /rating-service/**
+      sensitive-headers: Set-Cookie,Authorization
