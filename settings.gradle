@@ -7,5 +7,5 @@ pluginManagement {
 rootProject.name = 'spring-cloud-hello-world'
 
 include 'cloud-config-server'
-
+include 'eureka-server'
 

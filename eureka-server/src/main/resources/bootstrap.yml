@@ -1,0 +1,8 @@
+spring:
+    profiles:
+        active: dev
+    cloud:
+        config:
+            fail-fast: true
+            name: discovery
+            uri: http://localhost:8081
