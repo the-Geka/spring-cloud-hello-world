@@ -212,3 +212,4 @@ local.properties
 
 # git in idea
 .idea/
+.idea/vcs.xml
