@@ -28,13 +28,13 @@ server:
 
 zuul:
   routes:
-    book-service:
-      path: /book-service/**
+    store-service:
+      path: /store/**
       sensitive-headers: Set-Cookie,Authorization
     discovery:
       path: /discovery/**
       sensitive-headers: Set-Cookie,Authorization
       url: http://localhost:8082
-    rating-service:
-      path: /rating-service/**
+    warehouse-service:
+      path: /warehouse/**
       sensitive-headers: Set-Cookie,Authorization

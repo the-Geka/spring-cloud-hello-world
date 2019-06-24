@@ -1,0 +1,11 @@
+eureka:
+    client:
+        region: default
+        registryFetchIntervalSeconds: 5
+        serviceUrl:
+            defaultZone: http://localhost:8082/eureka/
+server:
+    port: 8084
+spring:
+    application:
+        name: store-service
